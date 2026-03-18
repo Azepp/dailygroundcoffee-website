@@ -7,7 +7,7 @@ import containerVariants from '@/animations/containerVariants'
 import fadeUpVariants from '@/animations/fadeUpVariants'
 
 export default function Beranda() {
-  const { ref, hasBeenInView } = useIsInView()
+const { ref, hasBeenInView } = useIsInView()
 
   return (
     <section id="beranda" className="lg:px-4">
@@ -40,12 +40,18 @@ export default function Beranda() {
             className="buttonlist w-full flex flex-col justify-end lg:items-end gap-2"
             variants={fadeUpVariants}
           >
-            <button className="text-sm lg:text-lg cursor-pointer lg:w-1/7 justify-center py-3 flex gap-1 items-center px-6 font-semibold rounded-full transition-all duration-150 bg-background text-foreground hover:bg-foreground hover:text-cream active:scale-95">
+            <a
+              href="#menu"
+              className="text-sm lg:text-lg cursor-pointer lg:w-1/7 justify-center py-3 flex gap-1 items-center px-6 font-semibold rounded-full transition-all duration-150 bg-background text-foreground hover:bg-foreground hover:text-cream active:scale-95"
+            >
               Lihat Menu
-            </button>
-            <button className="text-sm lg:text-lg cursor-pointer lg:w-1/7 justify-center py-3 flex gap-1 items-center px-6 font-semibold rounded-full transition-all duration-150 border-2 border-background text-cream hover:border-foreground hover:bg-foreground hover:text-cream active:scale-95">
+            </a>
+            <a
+              href="#kunjungi"
+              className="text-sm lg:text-lg cursor-pointer lg:w-1/7 justify-center py-3 flex gap-1 items-center px-6 font-semibold rounded-full transition-all duration-150 border-2 border-background text-cream hover:border-foreground hover:bg-foreground hover:text-cream active:scale-95"
+            >
               Kunjungi Kami
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 
