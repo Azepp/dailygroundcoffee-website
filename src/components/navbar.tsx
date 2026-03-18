@@ -8,10 +8,9 @@ import { CgClose } from 'react-icons/cg'
 
 function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [isBottom, setIsBottom] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isTablet, setIsTablet] = useState(false)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
+  const [isTablet, setIsTablet] = useState<boolean | null>(null)
   const rafRef = useRef<number | null>(null)
 
   const handleClick = () =>
@@ -33,8 +32,11 @@ function Navbar() {
   useEffect(() => {
     const checkBreakpoint = () => {
       const w = window.innerWidth
-      setIsMobile(w < 640)
-      setIsTablet(w >= 640 && w < 1024)
+      const mobile = w < 640
+      const tablet = w >= 640 && w < 1024
+      setIsMobile(mobile)
+      setIsTablet(tablet)
+      if (!mobile && !tablet) setIsMenuOpen(false)
     }
     checkBreakpoint()
     window.addEventListener('resize', checkBreakpoint)
@@ -45,14 +47,12 @@ function Navbar() {
     const handleScroll = () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
       rafRef.current = requestAnimationFrame(() => {
-        const scrollTop = window.scrollY
-        const windowHeight = window.innerHeight
-        const fullHeight = document.documentElement.scrollHeight
-        const progress = Math.min(scrollTop / 120, 1)
-        setScrollProgress(progress)
-        setIsBottom(scrollTop + windowHeight >= fullHeight - 10)
+      const scrollTop = window.scrollY
+      const progress = Math.min(scrollTop / 120, 1)
+      setScrollProgress(progress)
       })
     }
+    
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -134,6 +134,8 @@ function Navbar() {
       : desktopStyles
   const fullNavOpacity = isSmallNav ? 0 : Math.max(0, 1 - scrollProgress * 2.5)
   const pillNavOpacity = isSmallNav ? 1 : Math.max(0, scrollProgress * 2.5 - 1)
+
+  if (isMobile === null || isTablet === null) return null
 
   return (
     <div>

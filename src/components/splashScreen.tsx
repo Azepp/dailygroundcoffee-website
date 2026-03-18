@@ -54,7 +54,9 @@ export default function SplashScreen() {
             : { duration: 0.25, ease: 'easeIn' }
         }
       >
-        DailyGroundCoffee.
+        DailyGround
+        <br className="lg:hidden" />
+        Coffee.
       </motion.h1>
     </motion.div>
   )

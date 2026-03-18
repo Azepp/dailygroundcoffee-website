@@ -54,7 +54,7 @@ export default function Menu() {
         {/* Header */}
         <div className="header flex flex-col gap-6 lg:flex-row justify-between items-center mb-6">
           <motion.h1
-            className="text-4xl lg:text-6xl font-bold tracking-tighter"
+            className="text-4xl lg:text-6xl text-center lg:text-start font-bold tracking-tighter"
             variants={fadeUpVariants}
           >
             Menu Favorite Pelanggan
