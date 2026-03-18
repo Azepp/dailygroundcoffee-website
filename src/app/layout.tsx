@@ -3,6 +3,7 @@ import './globals.css'
 import SplashScreen from '@/components/splashScreen'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dailygroundcoffee.vercel.app'), // ✅ tambah ini
   title: 'Daily Ground Coffee',
   description:
     'Nikmati kopi berkualitas, suasana yang hangat, dan ruang nyaman untuk ngobrol, kerja, atau sekadar menikmati waktu santai.',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Daily Ground Coffee',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://dailygroundcoffee.vercel.app/og-image.png', // ✅ absolut
         width: 1200,
         height: 630,
         alt: 'Daily Ground Coffee',
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Daily Ground Coffee',
     description: 'Nikmati kopi berkualitas, suasana yang hangat.',
-    images: ['/og-image.png'],
+    images: ['https://dailygroundcoffee.vercel.app/og-image.png'], // ✅ absolut
   },
 }
 
