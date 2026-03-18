@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Daily Ground Coffee',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Daily Ground Coffee',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Daily Ground Coffee',
     description: 'Nikmati kopi berkualitas, suasana yang hangat.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
   },
 }
 
