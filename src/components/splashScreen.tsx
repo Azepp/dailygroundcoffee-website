@@ -45,7 +45,7 @@ export default function SplashScreen() {
       }}
     >
       <motion.h1
-        className="text-5xl font-extrabold tracking-tight text-cream"
+        className="text-5xl font-extrabold tracking-tight text-cream text-center"
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={
