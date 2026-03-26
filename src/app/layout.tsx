@@ -13,29 +13,6 @@ export const metadata: Metadata = {
     'daily ground coffee',
     'coffee shop',
   ],
-  openGraph: {
-    title: 'Daily Ground Coffee',
-    description:
-      'Nikmati kopi berkualitas, suasana yang hangat, dan ruang nyaman.',
-    url: 'https://dailygroundcoffee.vercel.app',
-    siteName: 'Daily Ground Coffee',
-    images: [
-      {
-        url: 'https://dailygroundcoffee.vercel.app/og-image.jpg', // ✅ absolut
-        width: 1200,
-        height: 630,
-        alt: 'Daily Ground Coffee',
-      },
-    ],
-    locale: 'id_ID',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Daily Ground Coffee',
-    description: 'Nikmati kopi berkualitas, suasana yang hangat.',
-    images: ['https://dailygroundcoffee.vercel.app/og-image.jpg'], // ✅ absolut
-  },
 }
 
 export default function RootLayout({
