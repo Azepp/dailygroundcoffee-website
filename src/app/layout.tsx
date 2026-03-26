@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Daily Ground Coffee',
     images: [
       {
-        url: 'https://dailygroundcoffee.vercel.app/og-image.png', // ✅ absolut
+        url: 'https://dailygroundcoffee.vercel.app/og-image.jpg', // ✅ absolut
         width: 1200,
         height: 630,
         alt: 'Daily Ground Coffee',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Daily Ground Coffee',
     description: 'Nikmati kopi berkualitas, suasana yang hangat.',
-    images: ['https://dailygroundcoffee.vercel.app/og-image.png'], // ✅ absolut
+    images: ['https://dailygroundcoffee.vercel.app/og-image.jpg'], // ✅ absolut
   },
 }
 
